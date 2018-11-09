@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <EditText
+        android:id="@+id/prod_name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:hint="Product Name"
+        android:maxLength="20"
+        android:padding="20dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/item_quantity"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:hint="Qty"
+        android:inputType="number"
+        android:maxLength="3"
+        android:padding="20dp"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/category_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_left"
+        app:layout_constraintTop_toBottomOf="@id/item_quantity"></android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="0.00"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/category_spinner"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@id/item_quantity" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/importedFlag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_right"
+        app:layout_constraintTop_toBottomOf="@id/category_spinner">
+
+        <RadioButton
+            android:id="@+id/imported"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="imported"/>
+
+        <RadioButton
+            android:id="@+id/others"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="others" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/add_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="+Cart"
+        android:onClick="onAddCartClicked"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline_vertical_left" />
+
+    <Button
+        android:id="@+id/buy_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Buy"
+        android:onClick="onBuyClicked"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline_vertical_right" />
+
+</android.support.constraint.ConstraintLayout>

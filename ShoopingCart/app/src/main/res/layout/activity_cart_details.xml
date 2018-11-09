@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_vertical_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/sub_total">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"></android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/design_default_color_primary_dark" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/sub_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="SubTotal"
+        android:paddingBottom="2dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/total_tax" />
+
+    <TextView
+        android:id="@+id/total_tax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="Tax"
+        android:paddingBottom="2dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/total_with_tax" />
+
+    <TextView
+        android:id="@+id/total_with_tax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="Total (Inclusive Tax)"
+        android:padding="5dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

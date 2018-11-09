@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShopingCart</string>
+    <string-array name="category_items">
+        <item>Select</item>
+        <item>Books</item>
+        <item>Music</item>
+        <item>Foods</item>
+        <item>Perfume</item>
+        <item>Medicine</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="category_price">
+        <item>0.00</item>
+        <item>150.50</item>
+        <item>75.00</item>
+        <item>15.69</item>
+        <item>560.25</item>
+        <item>1.08</item>
+        <item>10.00</item>
+    </string-array>
+</resources>

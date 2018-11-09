@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/itm_product_name"
+        android:hint="Product Name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+        android:paddingLeft="8dp"
+        android:gravity="left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/itm_category"
+        android:hint="Category"
+        android:textColor="@color/colorPrimary"
+        android:textSize="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itm_product_name"/>
+
+    <TextView
+        android:id="@+id/itm_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="quantity"
+        android:textSize="10dp"
+        android:paddingLeft="8dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itm_category"/>
+
+    <TextView
+        android:id="@+id/unit_tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:textSize="10dp"
+        android:paddingTop="2dp"
+        android:paddingRight="8dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itm_product_name"/>
+
+    <TextView
+        android:id="@+id/itm_unit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="0.00"
+        android:textSize="10dp"
+        android:paddingTop="2dp"
+        android:paddingRight="8dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unit_tax"/>
+
+    <TextView
+        android:id="@+id/itm_sub_total"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:gravity="right"
+        android:hint="0.00"
+        android:padding="8dp"
+        android:textSize="25dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
